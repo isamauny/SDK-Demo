@@ -1,15 +1,13 @@
-#How to use hfc with the IBM Bluemix Blockchain beta service
-
-The goal is to run [helloblockchain.js](https://github.com/ratnakar-asara/Node-Sample/blob/master/helloblockchain.js) sample program, which will deploy example02 chaincode and query/invoke it.
+#Uses the IBM Blockchain beta service to save a Stripe transaction from our core demo to a ledger.
 
 1. Install npm if not installed already, instructions are [here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
 
 1. clone this repository
    ```
-   git clone https://github.com/IBM-Blockchain/SDK-Demo.git
+   git clone https://github.com/isamauny/SDK-Demo.git
    ```
 
-1. Go to **SDK-Demo** folder and install hfc package with the below command:
+1. Go to **SDK-Demo** folder and install hfc package with the below command - This will install the latest HFC version.
 
 	```
 	npm install
@@ -19,15 +17,13 @@ The goal is to run [helloblockchain.js](https://github.com/ratnakar-asara/Node-S
 	- Refer the sample file in repo [here](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json)
 
      ![alt tag](servicecreds.png)
-
-1.  The node sdk will create the keyValStore directory and store cryptography data for each user that registers.
+     
+1. From SDK-Demo folder run node program - The node sdk will create the keyValStore directory and store cryptography data for each user that registers.
     ```
     WARNING: Once enrollment is successful you will see the crypto material under keyValStore-<network-id>
              Don't delete this material till your network is deleted or reset.
 	     If you lost this cryptography data you can't communicate with Bluemix CA server, thus enrollment fails	
     ```
-     
-1. From SDK-Demo folder run node program:
 	```
 	node helloblockchain.js
 	```
